@@ -47,8 +47,9 @@
 </head>
 <body>
    <script>
-			var a = document.getElementById('from').value;;
-			var b = document.getElementById('dest').value;;
+		var a = document.getElementById('from').value;;
+		var b = document.getElementById('dest').value;;
+	          
    </script>
 	<nav class="navbar navbar-expand-sm navbar-light bg-primary fixed-top">
 		<div class="container-fluid">
@@ -99,9 +100,10 @@
                          <option value="Quezon Ave.">Quezon Ave.</option>
                          <option value="North Ave.">North Ave.</option>
                         </select>
+				<button class="btn btn-success" type="button" onclick="var a = document.getElementById('from').value; var b = document.getElementById('dest').value; document.getElementById('cubee').innerHTML ='PHP' + ;">Show ans.</button>
 			<div class="cube">
 				<p>Price:</p><be>
-				<h1 id="cube">PHP0.00</h1>
+				<h1 id="cubee">PHP0.00</h1>
 			</div>
 			
 
