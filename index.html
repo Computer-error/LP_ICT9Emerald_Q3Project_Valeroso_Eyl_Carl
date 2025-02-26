@@ -30,13 +30,25 @@
 	class: center;
 	font-family: consolas;
    }
-		
+	.cube {
+	background-color: lightblue;
+	padding: 10px;
+	border: 1px solid #ce93d8 rgba(0, 0, 0, 0.1);
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	
+	text-align: center;
+	margin-top: 20px;
+	margin-left: 335px;
+	margin-right: 335px;
+	class: center;
+}
     </style>
 </head>
 <body>
-	<script>
-			var a = 20;
-			var b = 5;
+   <script>
+			var a = document.getElementById('from').value;;
+			var b = document.getElementById('dest').value;;
    </script>
 	<nav class="navbar navbar-expand-sm navbar-light bg-primary fixed-top">
 		<div class="container-fluid">
@@ -53,8 +65,8 @@
    <div class="container-fluid">
 		<div class="box">
 			<h2>TRAIN FARE GUIDE</h2>
-			<label>Choose your seat:</label>
-			<select id="mySelect" onchange="myFunction()">
+			<label>Going from:</label>
+			<select id="from" onchange="myFunction()">
                          <option value="" selected=""> </option>
                          <option value="Taft Ave.">Taft Ave.</option>
                          <option value="Magallanes">Magallanes</option>
@@ -69,7 +81,32 @@
                          <option value="GMA Kamuning">GMA Kamuning</option>
                          <option value="Quezon Ave.">Quezon Ave.</option>
                          <option value="North Ave.">North Ave.</option>
-</select>
+                        </select><be>
+		        <label>Destination:</label>
+			<select id="dest" onchange="myFunction()">
+                         <option value="" selected=""> </option>
+                         <option value="Taft Ave.">Taft Ave.</option>
+                         <option value="Magallanes">Magallanes</option>
+                         <option value="Ayala Ave.">Ayala Ave.</option>
+                         <option value="Buendia">Buendia</option>
+                         <option value="Guadalupe">Guadalupe</option>
+                         <option value="Boni Ave.">Boni Ave.</option>
+                         <option value="Shaw Blvd.">Shaw Blvd.</option>
+                         <option value="Ortigas">Ortigas</option>
+                         <option value="Santolan Annapolis">Santolan Annapolis</option>
+                         <option value="Araneta Center-Cubao">Araneta Center-Cubao</option>
+                         <option value="GMA Kamuning">GMA Kamuning</option>
+                         <option value="Quezon Ave.">Quezon Ave.</option>
+                         <option value="North Ave.">North Ave.</option>
+                        </select>
+			<div class="cube">
+				<p>Price:</p><be>
+				<h1 id="cube">PHP0.00</h1>
+			</div>
+			
+
+
+			
 
 </body>
 </html>
