@@ -11,10 +11,12 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <style>
       body {
-	background-image: url("bg.png");
-	background-attachment: fixed;
-	background-repeat: no-repeat;
-	}
+   		background-image: url("Bg.png");
+	      background-attachment: fixed;
+	      background-repeat: no-repeat;
+	      background-size: 100%;
+	      text-align: center;
+	      font-family: monospace;
 
 		.box {
 	background-color: white;
@@ -56,9 +58,9 @@
 			<a href=""><img src="" width="45" height="45"></a>
 			<div class="collapse navbar-collapse">
 				<ul class="navbar-nav me-auto">
-					<li class="nav-item"><button class="nav-link btn btn-info" style="padding-top: 5;" href="">Home</button></li>
-					<li class="nav-item"><button class="nav-link btn btn-info" href="">Schedule</button></li>
-					<li class="nav-item"><button class="nav-link btn btn-info" href="">Feedback</button></li>
+					<li class="nav-item"><a class="nav-link btn btn-info" style="padding-top: 5;" href="index.html">🏠Home</a></li>
+					<li class="nav-item"><a class="nav-link btn btn-info" href="page2.html">⌚Schedule</a></li>
+					<li class="nav-item"><a class="nav-link btn btn-info" href="page3.html">💬Feedback</a></li>
 				</ul>
 			</div>
 		</div>
@@ -67,48 +69,42 @@
 		<div class="box">
 			<h2>TRAIN FARE GUIDE</h2>
 			<label>Going from:</label>
-			<select id="from" onchange="myFunction()">
-                         <option value="" selected=""> </option>
-                         <option value="Taft Ave.">Taft Ave.</option>
-                         <option value="Magallanes">Magallanes</option>
-                         <option value="Ayala Ave.">Ayala Ave.</option>
-                         <option value="Buendia">Buendia</option>
-                         <option value="Guadalupe">Guadalupe</option>
-                         <option value="Boni Ave.">Boni Ave.</option>
-                         <option value="Shaw Blvd.">Shaw Blvd.</option>
-                         <option value="Ortigas">Ortigas</option>
-                         <option value="Santolan Annapolis">Santolan Annapolis</option>
-                         <option value="Araneta Center-Cubao">Araneta Center-Cubao</option>
-                         <option value="GMA Kamuning">GMA Kamuning</option>
-                         <option value="Quezon Ave.">Quezon Ave.</option>
-                         <option value="North Ave.">North Ave.</option>
-                        </select><be>
-		        <label>Destination:</label>
 			<select id="dest" onchange="myFunction()">
-                         <option value="" selected=""> </option>
-                         <option value="Taft Ave.">Taft Ave.</option>
-                         <option value="Magallanes">Magallanes</option>
-                         <option value="Ayala Ave.">Ayala Ave.</option>
-                         <option value="Buendia">Buendia</option>
-                         <option value="Guadalupe">Guadalupe</option>
-                         <option value="Boni Ave.">Boni Ave.</option>
-                         <option value="Shaw Blvd.">Shaw Blvd.</option>
-                         <option value="Ortigas">Ortigas</option>
-                         <option value="Santolan Annapolis">Santolan Annapolis</option>
-                         <option value="Araneta Center-Cubao">Araneta Center-Cubao</option>
-                         <option value="GMA Kamuning">GMA Kamuning</option>
-                         <option value="Quezon Ave.">Quezon Ave.</option>
-                         <option value="North Ave.">North Ave.</option>
+                         <option value="0" selected=""> </option>
+                         <option value="1">Taft Ave.</option>
+                         <option value="2">Magallanes</option>
+                         <option value="3">Ayala Ave.</option>
+                         <option value="4">Buendia</option>
+                         <option value="5">Guadalupe</option>
+                         <option value="6">Boni Ave.</option>
+                         <option value="7">Shaw Blvd.</option>
+                         <option value="8">Ortigas</option>
+                         <option value="9">Santolan Annapolis</option>
+                         <option value="10">Araneta Center-Cubao</option>
+                         <option value="11">GMA Kamuning</option>
+                         <option value="12">Quezon Ave.</option>
+                         <option value="13">North Ave.</option>
+                        </select><be>
+		  <label>Destination:</label>
+			<select id="dest" onchange="myFunction()">
+                         <option value="0" selected=""> </option>
+                         <option value="1">Taft Ave.</option>
+                         <option value="2">Magallanes</option>
+                         <option value="3">Ayala Ave.</option>
+                         <option value="4">Buendia</option>
+                         <option value="5">Guadalupe</option>
+                         <option value="6">Boni Ave.</option>
+                         <option value="7">Shaw Blvd.</option>
+                         <option value="8">Ortigas</option>
+                         <option value="9">Santolan Annapolis</option>
+                         <option value="10">Araneta Center-Cubao</option>
+                         <option value="11">GMA Kamuning</option>
+                         <option value="12">Quezon Ave.</option>
+                         <option value="13">North Ave.</option>
                         </select>
-				<button class="btn btn-success" type="button" onclick="var a = document.getElementById('from').value; var b = document.getElementById('dest').value; document.getElementById('cubee').innerHTML ='PHP' + ;">Show ans.</button>
+				<button class="btn btn-success" type="button" onclick="var a = document.getElementById('from').value; var b = document.getElementById('dest').value; document.getElementById('cubee').innerHTML ='PHP' + ;">Calculate</button>
 			<div class="cube">
 				<p>Price:</p><be>
 				<h1 id="cubee">PHP0.00</h1>
 			</div>
-			
-
-
-			
-
-</body>
 </html>
