@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html>
 <head>
 	<meta charset="utf-8">
@@ -19,7 +19,7 @@
 	      font-family: monospace;
 
 		.box {
-	background-color: white;
+	background-color: lightblue;
 	padding: 10px;
 	border: 1px solid #ce93d8 rgba(0, 0, 0, 0.1);
 	border-radius: 8px;
@@ -33,12 +33,12 @@
 	font-family: consolas;
    }
 	.cube {
-	background-color: lightblue;
+	background-color: navy;
 	padding: 10px;
 	border: 1px solid #ce93d8 rgba(0, 0, 0, 0.1);
 	border-radius: 8px;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-	
+	text-decoration-color: white;
 	text-align: center;
 	margin-top: 20px;
 	margin-left: 235px;
@@ -49,13 +49,12 @@
 </head>
 <body>
    <script>
-		var a = document.getElementById('from').value;;
-		var b = document.getElementById('dest').value;;
+
 	          
    </script>
 	<nav class="navbar navbar-expand-sm navbar-light bg-primary fixed-top">
 		<div class="container-fluid">
-			<a href=""><img src="" width="45" height="45"></a>
+			<a href=""><img src="th.jpg" width="45" height="45"></a>
 			<div class="collapse navbar-collapse">
 				<ul class="navbar-nav me-auto">
 					<li class="nav-item"><a class="nav-link btn btn-info" style="padding-top: 5;" href="index.html">🏠Home</a></li>
@@ -69,42 +68,44 @@
 		<div class="box">
 			<h2>TRAIN FARE GUIDE</h2>
 			<label>Going from:</label>
-			<select id="dest" onchange="myFunction()">
-                         <option value="0" selected=""> </option>
-                         <option value="1">Taft Ave.</option>
-                         <option value="2">Magallanes</option>
-                         <option value="3">Ayala Ave.</option>
-                         <option value="4">Buendia</option>
-                         <option value="5">Guadalupe</option>
-                         <option value="6">Boni Ave.</option>
-                         <option value="7">Shaw Blvd.</option>
-                         <option value="8">Ortigas</option>
-                         <option value="9">Santolan Annapolis</option>
-                         <option value="10">Araneta Center-Cubao</option>
-                         <option value="11">GMA Kamuning</option>
-                         <option value="12">Quezon Ave.</option>
-                         <option value="13">North Ave.</option>
-                        </select><be>
+			<select id="from" onchange="myFunction()">
+                         <option value="0" selected="">Select</option>
+                         <option value="13">Taft Ave.</option>
+                         <option value="13">Magallanes</option>
+                         <option value="13">Ayala Ave.</option>
+                         <option value="16">Buendia</option>
+                         <option value="16">Guadalupe</option>
+                         <option value="20">Boni Ave.</option>
+                         <option value="20">Shaw Blvd.</option>
+                         <option value="24">Ortigas</option>
+                         <option value="24">Santolan Annapolis</option>
+                         <option value="24">Araneta Center-Cubao</option>
+                         <option value="28">GMA Kamuning</option>
+                         <option value="28">Quezon Ave.</option>
+                         <option value="28">North Ave.</option>
+                        </select><br>
 		  <label>Destination:</label>
 			<select id="dest" onchange="myFunction()">
-                         <option value="0" selected=""> </option>
-                         <option value="1">Taft Ave.</option>
-                         <option value="2">Magallanes</option>
-                         <option value="3">Ayala Ave.</option>
-                         <option value="4">Buendia</option>
-                         <option value="5">Guadalupe</option>
-                         <option value="6">Boni Ave.</option>
-                         <option value="7">Shaw Blvd.</option>
-                         <option value="8">Ortigas</option>
-                         <option value="9">Santolan Annapolis</option>
-                         <option value="10">Araneta Center-Cubao</option>
-                         <option value="11">GMA Kamuning</option>
-                         <option value="12">Quezon Ave.</option>
-                         <option value="13">North Ave.</option>
-                        </select>
-				<button class="btn btn-success" type="button" onclick="var a = document.getElementById('from').value; var b = document.getElementById('dest').value; document.getElementById('cubee').innerHTML ='PHP' + ;">Calculate</button>
+                         <option value="0" selected="">Select</option>
+                         <option value="10.6557377">Taft Ave.</option>
+                         <option value="10.6557377">Magallanes</option>
+                         <option value="10.6557377">Ayala Ave.</option>
+                         <option value="13">Buendia</option>
+                         <option value="13">Guadalupe</option>
+                         <option value="16">Boni Ave.</option>
+                         <option value="16">Shaw Blvd.</option>
+                         <option value="20">Ortigas</option>
+                         <option value="20">Santolan Annapolis</option>
+                         <option value="20">Araneta Center-Cubao</option>
+                         <option value="23.25">GMA Kamuning</option>
+                         <option value="23.25">Quezon Ave.</option>
+                         <option value="23.25">North Ave.</option>
+                        </select><br>
+				<button class="btn btn-success" type="button" onclick="var a = document.getElementById('from').value; var b = document.getElementById('dest').value; var c = Math.round(b*1.22); document.getElementById('cubee').innerHTML ='PHP'+ c;">Calculate</button>
 			<div class="cube">
-				<p>Price:</p><be>
-				<h1 id="cubee">PHP0.00</h1>
-			</div>
+				<p style="color: white;">Price:</p>
+				<h1 id="cubee" style="color: white;">PHP0.00</h1>
+			</div><br>
+			<img src="map.png" height="360" width="360">
+		</div>
 </html>
